@@ -10,6 +10,7 @@ let comidaX = 0;
 let comidaY = 0;
 let colorGato = '#6728ee';
 let colorComida = '#870000';
+let puntaje = 0;
 
  function graficaRectangulo(x, y, ancho, alto, color) {
     ctx.fillStyle = color;
@@ -81,6 +82,13 @@ function detectarColision() {
         gatoX + anchoGato > comidaX &&
         gatoY < comidaY + altoComida &&
         gatoY + altoGato > comidaY) {
-        alert("¡El gato ha atrapado la comida!");
-    }
+            puntaje++;
+            mostrarEnSpam("txtPuntaje", puntaje);
+            aparecerComida();
+        }
+}
+
+function aparecerComida() {
+    comidaX = generarAleatorio(0, canvas.width - anchoComida);
+    comidaY = generarAleatorio(0, canvas.height - altoComida);
 }
