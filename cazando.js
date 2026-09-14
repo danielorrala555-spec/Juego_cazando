@@ -33,11 +33,54 @@ function graficarComida(){
 function limpiarCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+// ------- funcionen de movimiento para el gato ------//
+
 function moverIzquierda() {
     if (gatoX > 0) {
         gatoX -= 10;
         limpiarCanvas();
         graficarGato();
         graficarComida();
+        detectarColision();
+    }
+}
+
+function moverDerecha() {
+    if (gatoX < canvas.width - anchoGato) {
+        gatoX += 10;
+        limpiarCanvas();
+        graficarGato();
+        graficarComida();
+        detectarColision();
+    }
+}
+
+function moverArriba() {
+    if (gatoY > 0) {
+        gatoY -= 10;
+        limpiarCanvas();
+        graficarGato();
+        graficarComida();
+        detectarColision();
+    }
+}
+
+function moverAbajo() {
+    if (gatoY < canvas.height - altoGato) {
+        gatoY += 10;
+        limpiarCanvas();
+        graficarGato();
+        graficarComida();
+        detectarColision();
+    }
+}
+
+function detectarColision() {
+    if (gatoX < comidaX + anchoComida &&
+        gatoX + anchoGato > comidaX &&
+        gatoY < comidaY + altoComida &&
+        gatoY + altoGato > comidaY) {
+        alert("¡El gato ha atrapado la comida!");
     }
 }
