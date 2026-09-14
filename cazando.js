@@ -30,3 +30,14 @@ function graficarGato(){
 function graficarComida(){
     graficaRectangulo(comidaX, comidaY, anchoComida, altoComida, colorComida);
 }
+function limpiarCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+function moverIzquierda() {
+    if (gatoX > 0) {
+        gatoX -= 10;
+        limpiarCanvas();
+        graficarGato();
+        graficarComida();
+    }
+}
