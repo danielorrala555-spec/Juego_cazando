@@ -89,6 +89,14 @@ function detectarColision() {
             mostrarEnSpam("puntos", puntaje);
             aparecerComida();
         }
+    if (puntaje >= 6) {
+        clearInterval(intervaloTiempo);
+        alert("¡felicidades usuario! atrapaste 6 comidas, eres un gran cazador 🐱‍👤!");
+        puntaje = 0;
+        tiempoRestante = 10;
+        mostrarEnSpam("puntos", puntaje);
+        mostrarEnSpam("tiempo", tiempoRestante);
+    }
 }
 
 function aparecerComida() {
@@ -99,9 +107,21 @@ function restarTiempo() {
     tiempoRestante--;
     mostrarEnSpam("tiempo", tiempoRestante);
     if (tiempoRestante <= 0) {
+        clearInterval(intervaloTiempo);
         alert("puntaje: " + puntaje + " ¡demasiado lento amciano 👴!, espeero que mejores la procxima vez tortuga 🐢 ");
         puntaje = 0;
         tiempoRestante = 10;
         mostrarEnSpam("puntos", puntaje);
+        mostrarEnSpam("tiempo", tiempoRestante);
     }
+}
+
+function reiniciarJuego() {
+    puntaje = 0;
+    tiempoRestante = 10;
+    mostrarEnSpam("puntos", puntaje);
+    mostrarEnSpam("tiempo", tiempoRestante);
+    clearInterval(intervaloTiempo);
+    limpiarCanvas();
+    iniciarJuego();
 }
