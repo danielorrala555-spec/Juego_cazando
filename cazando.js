@@ -11,6 +11,8 @@ let comidaY = 0;
 let colorGato = '#6728ee';
 let colorComida = '#870000';
 let puntaje = 0;
+let tiempoRestante = 10;
+let intervaloTiempo;
 
  function graficaRectangulo(x, y, ancho, alto, color) {
     ctx.fillStyle = color;
@@ -23,6 +25,7 @@ function iniciarJuego() {
     gatoY = canvas.height / 2 - altoGato / 2;
     graficarGato();
     graficarComida();
+    intervaloTiempo = setInterval(restarTiempo, 1000);
 }
 function graficarGato(){
     graficaRectangulo(gatoX, gatoY, anchoGato, altoGato, colorGato);
@@ -83,7 +86,7 @@ function detectarColision() {
         gatoY < comidaY + altoComida &&
         gatoY + altoGato > comidaY) {
             puntaje++;
-            mostrarEnSpam("txtPuntaje", puntaje);
+            mostrarEnSpam("puntos", puntaje);
             aparecerComida();
         }
 }
@@ -91,4 +94,14 @@ function detectarColision() {
 function aparecerComida() {
     comidaX = generarAleatorio(0, canvas.width - anchoComida);
     comidaY = generarAleatorio(0, canvas.height - altoComida);
+}
+function restarTiempo() {
+    tiempoRestante--;
+    mostrarEnSpam("tiempo", tiempoRestante);
+    if (tiempoRestante <= 0) {
+        alert("puntaje: " + puntaje + " ¡demasiado lento amciano 👴!, espeero que mejores la procxima vez tortuga 🐢 ");
+        puntaje = 0;
+        tiempoRestante = 10;
+        mostrarEnSpam("puntos", puntaje);
+    }
 }
