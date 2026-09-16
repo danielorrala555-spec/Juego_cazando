@@ -108,7 +108,7 @@ function restarTiempo() {
     mostrarEnSpam("tiempo", tiempoRestante);
     if (tiempoRestante <= 0) {
         clearInterval(intervaloTiempo);
-        alert("puntaje: " + puntaje + " ¡demasiado lento amciano 👴!, espeero que mejores la procxima vez tortuga 🐢 ");
+        alert("puntaje: " + puntaje + " ¡demasiado lento anciano 👴!, espeero que mejores la procxima vez tortuga 🐢 ");
         puntaje = 0;
         tiempoRestante = 10;
         mostrarEnSpam("puntos", puntaje);
