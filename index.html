@@ -1,36 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <title>Juego Cazando</title>
-  <link rel="stylesheet" href="cazando.css">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Juego Cazando</title>
+
+    <!-- Fuente arcade -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="cazando.css">
 </head>
+
+
 <body onload="iniciarJuego()">
 
-  <h1>Juego Cazando</h1>
-  <p>Autor: daniel or9</p>
-  <canvas id="canvas" width="500" height="500" id="areaJuegos"></canvas>
+    <main class="juego">
 
 
-  <div class="controles">
-    <button onclick="moverArriba()">⬆</button>
-    <br>
-    <button onclick="moverIzquierda()">⬅</button>
-    <button onclick="moverAbajo()">⬇</button>
-    <button onclick="moverDerecha()">➡</button>
-  </div>
+        <!-- =========================
+             TÍTULO
+        ========================== -->
+
+        <header class="cabecera">
+
+            <h1 class="titulo">
+                [ JUEGO CAZANDO ]
+            </h1>
+
+            <p class="autor">
+                AUTOR: DANIEL OR9
+            </p>
+
+        </header>
 
 
-  <div class="panel">
-    <span>Puntos: <span id="puntos">0</span></span>
-    <span>Tiempo: <span id="tiempo">10</span></span>
-    <button onclick="reiniciarJuego()">Reiniciar</button>
-  </div>
 
-  <p id="mensaje"></p>
-  <script src="cazando.js"></script>
-  <script src="utils.js"></script>
+        <!-- =========================
+             CANVAS
+        ========================== -->
 
+        <section class="zona-juego">
+
+            <div class="marco-canvas">
+
+                <canvas
+                    id="areaJuegos"
+                    width="500"
+                    height="500">
+                </canvas>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PANEL
+        ========================== -->
+
+        <section class="panel">
+
+
+            <div class="estadistica">
+
+                <span class="icono-puntos">
+                    ★
+                </span>
+
+                <div class="datos">
+
+                    <span class="etiqueta">
+                        PUNTOS
+                    </span>
+
+                    <span id="puntos">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="estadistica">
+
+                <span class="icono-tiempo">
+                    ◷
+                </span>
+
+                <div class="datos">
+
+                    <span class="etiqueta">
+                        TIEMPO
+                    </span>
+
+                    <span id="tiempo">
+                        10
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <button
+                class="boton-reiniciar"
+                onclick="reiniciarJuego()">
+
+                ↻ REINICIAR
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTROLES
+        ========================== -->
+
+        <section class="controles">
+
+
+            <div class="fila-arriba">
+
+                <button onclick="moverArriba()">
+                    ↑
+                </button>
+
+            </div>
+
+
+            <div class="fila-abajo">
+
+                <button onclick="moverIzquierda()">
+                    ←
+                </button>
+
+                <button onclick="moverAbajo()">
+                    ↓
+                </button>
+
+                <button onclick="moverDerecha()">
+                    →
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- MENSAJES DEL JUEGO -->
+
+        <p id="mensaje"></p>
+
+
+    </main>
+
+
+    <script src="cazando.js"></script>
+    <script src="utils.js"></script>
 
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-const canvas = document.getElementById('canvas');
+const canvas = document.getElementById('areaJuegos');
 const ctx = canvas.getContext('2d');
 const anchoGato = 100;
 const altoGato = 60;

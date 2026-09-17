@@ -1,0 +1,15 @@
+prompt.1
+   actua como un diseñador grafico experto, actualmente mi juego se ve asi, dale 
+   un diseño estilo arcade y atrapante (la genera una imagen o boceto de como quedaria) 
+
+prompt.2
+   combina ese diseño con este diseño (agregar imagen de referencia) y agregale un eestilo neon al canvas y a los botones 
+   y un azul elecrico al titulo 
+
+prompt.3
+   a al imagen que generate quitale todo lo del centro "el juego, el titulo y los botones"
+   solo deja el diseño del fondo y dale un formato 1920 x 1080 ya que lo usare como fondo en el juego
+
+prompt.4
+   (agregar el codigo html y css) utiza el codigo html y css para darle el mismo estilo a mi proyecto
+   trata de no cambiar los ide ya que los nececito para el js
