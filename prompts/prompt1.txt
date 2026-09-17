@@ -13,3 +13,6 @@ prompt.3
 prompt.4
    (agregar el codigo html y css) utiza el codigo html y css para darle el mismo estilo a mi proyecto
    trata de no cambiar los ide ya que los nececito para el js
+
+prompt.5
+   agrega este logo en la pate superior, que este arriba del titulo y centrado (agregar imagen ) 

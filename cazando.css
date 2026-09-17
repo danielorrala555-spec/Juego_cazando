@@ -10,11 +10,37 @@ html,
 body {
     /* ... */
 
-    background-image: url("ChatGPT Image 16 sept 2026, 09_10_07 p.m..png");
+    background:
+        linear-gradient(
+            rgba(20, 3, 4, 0.502),
+            rgba(15, 3, 25, 0.319)
+        ),
+        url("ChatGPT Image 16 sept 2026, 09_10_07 p.m..png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: #08051df9;
+}
+/* =====================================
+   LOGO
+===================================== */
+
+.logo-juego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.logo-juego img {
+    width: 230px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
 }
 
 body {
@@ -130,7 +156,7 @@ body {
 
 .zona-juego {
 
-    width: 100%;
+    width: 80%;
 
     margin: 0 auto;
 }
